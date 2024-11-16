@@ -1,0 +1,52 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+
+# SQLite database
+db.sqlite3
+
+# Django-related
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3-journal
+
+# Media/Static files
+media/
+staticfiles/
+
+# Environments
+.env
+.env.*
+
+# Docker
+*.log
+*.pid
+*.seed
+*.pid.lock
+*.tar
+*.bak
+*.swp
+Dockerfile~
+docker-compose.override.yml
+
+# Editor settings
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# macOS
+.DS_Store
+
+# Ignore Python packaging
+*.egg-info/
+dist/
+build/
+*.egg
