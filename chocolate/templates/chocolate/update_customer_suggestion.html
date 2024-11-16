@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Customer Suggestion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Update Customer Suggestion</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="customer_name">Customer Name:</label>
+        <input type="text" name="customer_name" id="customer_name" value="{{ suggestion.customer_name }}" required>
+        <label for="flavor_suggestion">Flavor Suggestion:</label>
+        <textarea name="flavor_suggestion" id="flavor_suggestion" required>{{ suggestion.flavor_suggestion }}</textarea>
+        <label for="allergy_concerns">Allergy Concerns:</label>
+        <textarea name="allergy_concerns" id="allergy_concerns">{{ suggestion.allergy_concerns }}</textarea>
+        <button type="submit">Update Suggestion</button>
+    </form>
+</body>
+</html>
